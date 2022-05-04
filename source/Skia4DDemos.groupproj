@@ -3,7 +3,7 @@
         <ProjectGuid>{07693AC5-3477-4CCA-8A0E-63FAEA98B041}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
-        <Projects Include="Splash\Splash.dproj">
+        <Projects Include="Splash\SplashDemo.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -14,23 +14,23 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="Splash">
-        <MSBuild Projects="Splash\Splash.dproj"/>
+    <Target Name="SplashDemo">
+        <MSBuild Projects="Splash\SplashDemo.dproj"/>
     </Target>
-    <Target Name="Splash:Clean">
-        <MSBuild Projects="Splash\Splash.dproj" Targets="Clean"/>
+    <Target Name="SplashDemo:Clean">
+        <MSBuild Projects="Splash\SplashDemo.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="Splash:Make">
-        <MSBuild Projects="Splash\Splash.dproj" Targets="Make"/>
+    <Target Name="SplashDemo:Make">
+        <MSBuild Projects="Splash\SplashDemo.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="Splash"/>
+        <CallTarget Targets="SplashDemo"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="Splash:Clean"/>
+        <CallTarget Targets="SplashDemo:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="Splash:Make"/>
+        <CallTarget Targets="SplashDemo:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
