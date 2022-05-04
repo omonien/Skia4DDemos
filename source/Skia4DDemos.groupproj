@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{07693AC5-3477-4CCA-8A0E-63FAEA98B041}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Splash\Splash.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Splash">
+        <MSBuild Projects="Splash\Splash.dproj"/>
+    </Target>
+    <Target Name="Splash:Clean">
+        <MSBuild Projects="Splash\Splash.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Splash:Make">
+        <MSBuild Projects="Splash\Splash.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Splash"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Splash:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Splash:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,43 @@
+object FormMain: TFormMain
+  Left = 0
+  Top = 0
+  ActiveControl = ButtonClose
+  Caption = 'Splash Demo - '#169' 2020 Developer Experts'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object SkLabel1: TSkLabel
+    Align = Top
+    Margins.Left = 32.000000000000000000
+    Margins.Top = 32.000000000000000000
+    Margins.Right = 32.000000000000000000
+    Position.X = 48.000000000000000000
+    Position.Y = 48.000000000000000000
+    Scale.X = 1.500000000000000000
+    Scale.Y = 1.500000000000000000
+    Size.Width = 362.666687011718800000
+    Size.Height = 19.047618865966800000
+    Size.PlatformDefault = False
+    StyledSettings = [Family, Size, FontColor]
+    TextSettings.Decorations.Style = Double
+    TextSettings.Font.Weight = Medium
+    TextSettings.HorzAlign = Center
+    Words = <
+      item
+        Text = 'This is the Main Form'
+      end>
+  end
+  object ButtonClose: TButton
+    Anchors = [akRight, akBottom]
+    Default = True
+    Position.X = 536.000000000000000000
+    Position.Y = 440.000000000000000000
+    TabOrder = 1
+    Text = 'Close'
+    OnClick = ButtonCloseClick
+  end
+end
