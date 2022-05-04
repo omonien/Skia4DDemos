@@ -5,7 +5,7 @@ uses
   Skia.FMX,
   FMX.Types,
   FMX.Forms,
-  SplashDemo.Forms.Main in 'SplashDemo.Forms.Main.pas' {FormMain} ,
+  SplashDemo.Forms.Main in 'SplashDemo.Forms.Main.pas' {FormMain},
   SK.SplashForm in '..\common\SK.SplashForm.pas' {Splash};
 
 {$R *.res}
